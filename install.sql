@@ -141,7 +141,8 @@ create table employees (
 	primary key	(id)
 );
 
-create table report_repairs (
+create table report_repairs 
+(
 	id		varchar(7),
 	id_room		varchar(5),
 	id_customer	varchar(10),
@@ -156,11 +157,11 @@ create table report_repairs (
 	date_repaired	datetime,
 	primary key	(id),
 	foreign key	(id_room)
-		references room(id),
+		references rooms(id),
 	foreign key	(id_customer)
-		references customer(id),
+		references customers(id),
 	foreign key	(id_employee)
-		references employee(id)
+		references employees(id)
 );
 
 create table incomes (
@@ -174,7 +175,7 @@ create table incomes (
   _time   time,
 	primary key	(id),
 	foreign key	(id_customer)
-		references customer(id)
+		references customers(id)
 );
 
 create table expences (
