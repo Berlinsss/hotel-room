@@ -170,6 +170,8 @@ create table incomes (
 	amount		money,
 	note		text,
 	ref_id		varchar(50),
+  _date   date,
+  _time   time,
 	primary key	(id),
 	foreign key	(id_customer)
 		references customer(id)
@@ -182,6 +184,8 @@ create table expences (
 	amount		money,
 	note		text,
 	invoice_id	varchar(50),
+  _date   date,
+  _time   time,
 	primary key	(id),
 	foreign key	(id_employee)
 		references employees(id)
