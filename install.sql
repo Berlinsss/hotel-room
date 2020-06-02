@@ -160,7 +160,7 @@ create table report_repairs (
 	foreign key	(id_customer)
 		references customer(id),
 	foreign key	(id_employee)
-		references employee(id)
+		references employees(id)
 );
 
 create table incomes (
