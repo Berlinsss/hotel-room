@@ -1,0 +1,46 @@
+public static void registers(Connection con) throws SQLException
+    {
+		
+    	Scanner input=new Scanner(System.in);
+    	
+    	System.out.println("Please enter firstname:");
+    	String firstname=input.nextLine();
+    	/*
+    	System.out.println("Please enter lastname:");
+    	String lastname=input.nextLine();
+    	System.out.println("Please enter gender:");
+    	String gender=input.nextLine();
+    	System.out.println("Please enter birthday:");
+    	String birthday=input.nextLine();
+    	System.out.println("Please enter telephone:");
+    	String telephone=input.nextLine();
+    	System.out.println("Please enter mobilephone1:");
+    	String mobilephone1=input.nextLine();
+    	System.out.println("Please enter mobilephone2:");
+    	String mobilephone2=input.nextLine();
+    	System.out.println("Please enter email:");
+    	String email=input.nextLine();
+    	System.out.println("Please enter note:");
+    	String note=input.nextLine();
+    	*/
+    	
+    	String sql=
+    				"insert into customers values('123','"+firstname+"')";
+    				/*
+    				"','"+lastname+
+    				"','"+gender+
+    				"','"+birthday+
+    				"','"+telephone+
+    				"','"+mobilephone1+
+    				"','"+mobilephone2+
+    				"','"+email+
+    				"','"+note+
+    				"')";
+    				*/
+    	
+    	Statement stmt=con.createStatement();
+    	
+    	stmt.executeUpdate(sql);
+    	
+    	return;
+    }
